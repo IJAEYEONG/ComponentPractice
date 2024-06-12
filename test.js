@@ -1,13 +1,13 @@
 const tagComponent = (tagName, textNode) => {
   return `<${tagName}>${textNode}</${tagName}>`;
-}
-
+}   
 const container = () => {
   const today = new Date();
+  console.log(today)
+  const test = Date.now()
+  console.log(test)
   const date = today.getDate();
-
-  if (date === 11) {
-    // A방식
+  if (date !== 12) {
     return `
       ${tagComponent('header', '헤더부분')}
       ${tagComponent('footer', '푸터부분')}
@@ -15,11 +15,9 @@ const container = () => {
   } else {
     return `
       ${tagComponent('header', '헤더부분')}
-      ${tagComponent('div', `나는지금 ${date}에 살고있나?`)}
-      ${tagComponent('footer', '푸터부분')}aaaaa
+      ${tagComponent('div', `오늘은 ${today}이다.`)}
+      ${tagComponent('footer', '푸터부분')}
     `;
   }
 }
-
-// 테스트
 console.log(container());

@@ -4,7 +4,6 @@ class BasicData {
     this.age = age;
     this.job = job;
   }
-
   set name(nameValue) {
     if (typeof nameValue === "string") {
       this._name = nameValue;
@@ -12,15 +11,20 @@ class BasicData {
       console.error("x");
     }
   }
-
-  set age(ageValue) {
-    if (typeof ageValue === "number") {
-      this._age = ageValue;
-    } else {
-      console.error("x");
+  set age(ageValue){
+    if(ageValue>0&& ageValue<100){
+      this._age=ageValue;
+    }else{
+      this._age=0;
     }
   }
-
+  // set age(ageValue) {
+  //   if (typeof ageValue === "number") {
+  //     this._age = ageValue;
+  //   } else {
+  //     console.error("x");
+  //   }
+  // }
   set job(jobValue) {
     if (typeof jobValue === "string") {
       this._job = jobValue;
@@ -29,19 +33,18 @@ class BasicData {
     }
   }
 }
-
-const component = () => {
-  let obj = new BasicData("test", 20, "미정");
-  console.log(obj);
-  const decision = () => {
-    if (obj instanceof BasicData) {
-      return `<h1>${obj._name}</h1>`;
-    } else {
-      throw new Error("Error");
-    }
-  };
-  return decision();
-};
-console.log(component())
-component()
-
+module.exports={BasicData,name}
+// const component = () => {
+//   let obj = new BasicData("test", 20, "미정");
+//   console.log(obj);
+//   // const decision = () => {
+//   //   if (obj instanceof BasicData) {
+//   //     return `<h1>${obj._name}</h1>`;
+//   //   } else {
+//   //     throw new Error("Error");
+//   //   }
+//   // };
+//   return `<h1>${obj._name}</h1>`;
+// };
+// console.log(component())
+// component()

@@ -25,4 +25,4 @@ const component = (age,job) => {
   <h3>${anotherFunc()}</h3>`;
 
 }
-console.log(component())
+console.log(component(20,20))
