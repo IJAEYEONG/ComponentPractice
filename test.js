@@ -16,7 +16,7 @@ const container = () => {
     return `
       ${tagComponent('header', '헤더부분')}
       ${tagComponent('div', `나는지금 ${date}에 살고있나?`)}
-      ${tagComponent('footer', '푸터부분')}
+      ${tagComponent('footer', '푸터부분')}aaaaa
     `;
   }
 }
