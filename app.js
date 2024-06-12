@@ -45,4 +45,3 @@ const component = () => {
 console.log(component())
 component()
 
-
