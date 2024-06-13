@@ -33,18 +33,11 @@ class BasicData {
     }
   }
 }
-module.exports={BasicData,name}
-// const component = () => {
-//   let obj = new BasicData("test", 20, "미정");
-//   console.log(obj);
-//   // const decision = () => {
-//   //   if (obj instanceof BasicData) {
-//   //     return `<h1>${obj._name}</h1>`;
-//   //   } else {
-//   //     throw new Error("Error");
-//   //   }
-//   // };
-//   return `<h1>${obj._name}</h1>`;
-// };
-// console.log(component())
-// component()
+class Test{
+  constructor(a,b,c){
+    this.a=a;
+    this.b=b;
+    this.c=c
+  }
+}
+module.exports={BasicData}
